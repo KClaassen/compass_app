@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Netguru Compass</string>
+    <string name="Longtitude">Longtitude: </string>
+    <string name="latitude">Latitude: </string>
+    <string name="btn_setlocation">Set location</string>
+    <string name="distance_to_destination">Distance to destination: </string>
+    <string name="set_next_destination">Set next destination</string>
+</resources>
