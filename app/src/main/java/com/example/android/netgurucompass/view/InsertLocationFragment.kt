@@ -44,7 +44,8 @@ class InsertLocationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_insert_location, container, false)
+        binding =
+            DataBindingUtil.inflate(inflater, R.layout.fragment_insert_location, container, false)
 
         initDestinationViewModel()
         initView()
@@ -64,14 +65,15 @@ class InsertLocationFragment : Fragment() {
                     navController.popBackStack()
                 }
 
-            }catch (e:NumberFormatException){
-                Toast.makeText(requireContext(),"Insert correct coordinates !", Toast.LENGTH_LONG).show()
+            } catch (e: NumberFormatException) {
+                Toast.makeText(requireContext(), "Insert correct coordinates !", Toast.LENGTH_LONG)
+                    .show()
             }
 
 
         }
     }
-
+    
     private fun initDestinationViewModel() {
         insertViewModel.initShared(requireContext())
         lifecycleScope.launch {
@@ -100,5 +102,5 @@ class InsertLocationFragment : Fragment() {
         super.onPause()
     }
 
-    private fun String.toEditable(): Editable = Editable.Factory.getInstance().newEditable(this)
+    //private fun String.toEditable(): Editable = Editable.Factory.getInstance().newEditable(this)
 }
